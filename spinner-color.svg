@@ -4,25 +4,30 @@
           position: absolute;
           width: 100%;
           height: 100%;
+          --red: #FF3131;
+          --green: #39FF14;
+          --blue: #00FFFF;
+          --grey: #799b79;
+          animation: color-change 20s linear infinite;
         }
         
         .loader_polygons{
           opacity:0.5;
           stroke-width: 0.5;
-          stroke: #799b79;
+          stroke: var(--grey);
           fill: none;
           transition: stroke 0.3s 0.9s;
         }
         
         .loader_plus {
           opacity: 1;
-          fill: #FF3131;
+          fill: var(--red);
           animation: fade 1s infinite;
           transition: fill 0.15s;
         }
         
         .loader_innercircle_1{
-          fill: #00FFFF;
+          fill: var(--blue);
           animation: rotate 4s infinite linear;
           transform-origin: 53% 52%;
           transition: fill 0.15s;
@@ -30,7 +35,7 @@
         
         .loader_innercircle_2{
           opacity: 0.8;
-          fill: #00FFFF;
+          fill: var(--blue);
           animation: rotate 2s infinite linear reverse;
           transform-origin: 53% 52%;
           transition: fill 0.15s 0.15s;
@@ -38,21 +43,21 @@
         
         .loader_innercircle_3{
           opacity: 0.8;
-          fill: #00FFFF;
+          fill: var(--blue);
           animation: rotate 1s infinite linear;
           transform-origin: 53% 52%;
           transition: fill 0.15s 0.3s;
         }
         
         .loader_innercircle_4{
-          fill: #00FFFF;
+          fill: var(--blue);
           animation: rotate 2.5s infinite reverse linear;
           transform-origin: 53% 52%;
           transition: fill 0.15s 0.45s;
         }
         
         .loader_innercircle_5{
-          fill: #00FFFF;
+          fill: var(--blue);
           animation: rotate 2s infinite reverse linear;
           transform-origin: 53% 52%;
           transition: fill 0.15s 0.6s;
@@ -60,7 +65,7 @@
         
         .loader_innercircle_6{
           opacity: 0.8;
-          fill: #00FFFF;
+          fill: var(--blue);
           animation: rotate 1s infinite linear;
           transform-origin: 53% 52%;
           transition: fill 0.15s 0.75s;
@@ -69,7 +74,7 @@
         .loader_pointer{
           fill: none;
           stroke-width: 1.5;
-          stroke: #39FF14;
+          stroke: var(--green);
           transition: stroke 0.15s 0.9s;
         }
         
@@ -130,6 +135,30 @@
         @keyframes rotate{
           to{
             transform: rotate(360deg);
+          }
+        }
+
+        @keyframes color-change {
+          0%, 50%, 100% { 
+            <!-- initial -->
+            --red: #FF3131;
+            --green: #39FF14;
+            --blue: #00FFFF;
+            --grey: #799b79;
+          }
+          25% { 
+            <!-- red -->
+            --red: #FF3131;
+            --green: #FF3131;
+            --blue: #FF3131;
+            --grey: #FF3131;
+          }
+          75% {
+            <!-- green -->
+            --red: #39FF14;
+            --green: #39FF14;
+            --blue: #39FF14;
+            --grey: #39FF14;
           }
         }
     </style>
