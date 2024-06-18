@@ -73,51 +73,6 @@
           transition: stroke 0.15s 0.9s;
         }
         
-        /* remove loader */
-        
-        .loader_container.failure,
-        .loader_container.success{
-          transition: height 0.3s linear 1.2s, width 0.3s linear 1.6s;
-          height: 0.1rem;
-          width: 0.1rem;
-        }
-        
-        
-        
-        /* Change the hover with a failure class */
-        
-        .loader_svg.failure .loader_plus,
-        .loader_svg.failure .loader_innercircle_1,
-        .loader_svg.failure .loader_innercircle_2,
-        .loader_svg.failure .loader_innercircle_3,
-        .loader_svg.failure .loader_innercircle_4,
-        .loader_svg.failure .loader_innercircle_5,
-        .loader_svg.failure .loader_innercircle_6{
-          fill: #FF3131;
-        }
-        
-        .loader_svg.failure .loader_pointer,
-        .loader_svg.failure .loader_polygons{
-          stroke: #FF3131;
-        }
-        
-        /* Change the active with a success class */
-        
-        .loader_svg.success .loader_plus,
-        .loader_svg.success .loader_innercircle_1,
-        .loader_svg.success .loader_innercircle_2,
-        .loader_svg.success .loader_innercircle_3,
-        .loader_svg.success .loader_innercircle_4,
-        .loader_svg.success .loader_innercircle_5,
-        .loader_svg.success .loader_innercircle_6{
-          fill: #39FF14;
-        }
-        
-        .loader_svg.success .loader_pointer,
-        .loader_svg.success .loader_polygons{
-          stroke: #39FF14;
-        }
-        
         @keyframes fade{
           0%, 100%{
             opacity: 1;
